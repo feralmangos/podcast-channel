@@ -9,11 +9,11 @@
 nav {
   height: 44px;
   position: relative;
+  padding: 10px 16px 10px 16px;
 }
 nav .navbar {
   display: flex;
   justify-content: space-between;
-  align-items: center;
 }
 nav .navbar input[type=checkbox] {
   display: none;
@@ -26,11 +26,10 @@ nav .navbar input[type=checkbox]:checked ~ ul {
 }
 @media screen and (min-width: 1024px) {
   nav .navbar input[type=checkbox]:checked ~ ul {
+    position: static;
     display: flex;
     flex-direction: row;
     background: none;
-    margin-top: -35px;
-    margin-right: 100px;
     color: #0000FF;
     border: none;
     justify-content: flex-end;
@@ -48,7 +47,6 @@ nav .navbar input:checked + label .burger-icon {
   display: none;
 }
 nav .navbar .logo img {
-  position: absolute;
   left: 16px;
   top: 10px;
 }
@@ -60,7 +58,6 @@ nav .navbar .logo img {
 }
 nav .navbar label .menu-icon {
   display: flex;
-  position: absolute;
   top: 10px;
   right: 16px;
   cursor: pointer;
@@ -95,17 +92,15 @@ nav ul {
 }
 @media screen and (min-width: 1024px) {
   nav ul {
+    position: static;
     display: flex;
     background: none;
-    margin-top: -35px;
     color: black;
     border: none;
-    display: flex;
     background: none;
     color: black;
     border: none;
     justify-content: flex-end;
-    margin-right: 100px;
   }
 }
 nav ul li a {
@@ -134,8 +129,8 @@ nav ul li a:hover {
 }
 
 header {
-  margin-top: 29px;
   font-family: "IBM Plex Mono", monospace;
+  margin: 16px;
 }
 @media screen and (min-width: 1024px) {
   header {
@@ -149,8 +144,8 @@ header h1 {
   color: #060A24;
   letter-spacing: 0;
   line-height: 42px;
-  width: 240px;
-  margin-left: 16px;
+  margin-right: 16px;
+  width: 100%;
   font-weight: normal;
 }
 header h1 span {
@@ -170,8 +165,6 @@ header h2 {
   letter-spacing: 0px;
   line-height: 24px;
   font-size: 16px;
-  margin: 16px 16px 0px;
-  width: 288px;
   height: 66px;
 }
 @media screen and (min-width: 1024px) {
@@ -230,37 +223,37 @@ header h2 {
   width: 100%;
   height: auto;
   background-image: linear-gradient(225deg, #0000FF 0%, #0000A3 100%);
-}
-.podcasts::before {
-  margin-top: -5px;
-  margin-left: 20px;
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  content: "";
-  background: white;
-  top: 0;
-  bottom: 0;
-  right: 0;
-  left: 35px;
-  transform-origin: top left;
-  transform: skew(-85deg);
-  z-index: 1;
-}
-.podcasts::after {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  content: "";
-  background: white;
-  top: 0;
-  bottom: 0;
-  right: 0;
-  left: 0;
-  transform: inherit;
-  transform-origin: bottom left;
-  transform: skew(-85deg);
-  z-index: 3;
+  /* &::before {
+      margin-top: -5px;
+      margin-left: 20px;
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      content: '';
+      background: white;
+      top: 0;
+      bottom: 0;
+      right: 0;
+      left: 35px;
+      transform-origin: top left;
+      transform: skew(-85deg);
+      z-index: 1;
+  }
+  &::after {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      content: '';
+      background: white;
+      top: 0;
+      bottom: 0;
+      right: 0;
+      left: 0;
+      transform: inherit;
+      transform-origin: bottom left;
+      transform: skew(-85deg);
+      z-index: 3;
+  }*/
 }
 .podcasts .bg-podcasts .episodes {
   margin: 0px 0 25px 16px;
@@ -319,7 +312,7 @@ header h2 {
 }
 .floating-phone img {
   z-index: 2;
-  width: 360px;
+  width: 288px;
   left: 50%;
   transform: translate(-5%, 0);
 }
@@ -369,7 +362,7 @@ header h2 {
   line-height: 22px;
   font-size: 14px;
   margin: 0 auto;
-  width: 288px;
+  width: 100%;
   font-family: "IBM Plex Sans", sans-serif;
   font-size: 36px;
   line-height: 42px;
@@ -390,7 +383,7 @@ header h2 {
   margin-top: -5px;
 }
 .invited .fprogrammers .fpic img {
-  width: 320px;
+  width: 100%;
 }
 @media screen and (min-width: 1024px) {
   .invited .fprogrammers .fpic img {
