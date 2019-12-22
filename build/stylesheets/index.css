@@ -138,21 +138,24 @@ header {
     margin-top: 120px;
   }
 }
-header h1 {
+header .main-title {
+  padding-right: 32px;
+  margin-bottom: 16px;
+}
+header .main-title h1 {
   font-family: "IBM Plex Sans", sans-serif;
   font-size: 36px;
   color: #060A24;
   letter-spacing: 0;
   line-height: 42px;
-  margin-right: 16px;
   width: 100%;
   font-weight: normal;
 }
-header h1 span {
+header .main-title h1 span {
   text-decoration: line-through;
 }
 @media screen and (min-width: 1024px) {
-  header h1 {
+  header .main-title h1 {
     width: 100%;
     font-size: 66px;
     color: #060A24;
@@ -160,11 +163,11 @@ header h1 span {
   }
 }
 header h2 {
-  font-family: "IBM Plex Sans", sans-serif;
+  font-family: "IBM Plex Mono", sans-serif;
   color: #060A24;
   letter-spacing: 0px;
   line-height: 24px;
-  font-size: 16px;
+  font-size: 14px;
   height: 66px;
 }
 @media screen and (min-width: 1024px) {
@@ -186,7 +189,8 @@ header h2 {
   color: #060A24;
 }
 .btn button {
-  margin: 36px 0px 36px 16px;
+  margin: 0 auto;
+  margin-top: 36px;
   font-family: "IBM Plex Mono", monospace;
   font-size: 16px;
   color: #060A24;
@@ -223,6 +227,7 @@ header h2 {
   width: 100%;
   height: auto;
   background-image: linear-gradient(225deg, #0000FF 0%, #0000A3 100%);
+  overflow: hidden;
   /* &::before {
       margin-top: -5px;
       margin-left: 20px;
@@ -255,8 +260,34 @@ header h2 {
       z-index: 3;
   }*/
 }
+.podcasts::before {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  content: "";
+  background: white;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  transform-origin: top left;
+  transform: skew(-85deg);
+  z-index: 1;
+}
+.podcasts::after {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  content: "";
+  background: white;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  transform-origin: bottom left;
+  transform: skew(-85deg);
+  z-index: 1;
+}
 .podcasts .bg-podcasts .episodes {
-  margin: 0px 0 25px 16px;
+  margin: 0px 0 21px 16px;
   padding-top: 64px;
 }
 @media screen and (min-width: 1024px) {
@@ -271,9 +302,6 @@ header h2 {
   font-size: 36px;
   line-height: 42px;
 }
-.podcasts .bg-podcasts .spotify .phone {
-  margin-top: 45px;
-}
 .podcasts .bg-podcasts .spotify-list {
   display: flex;
   flex-wrap: wrap;
@@ -285,61 +313,56 @@ header h2 {
     padding: 0px 44px 232px 44px;
   }
 }
-.podcasts .bg-podcasts .spotify-list iframe {
+.podcasts .bg-podcasts .spotify-list .spotify {
+  line-height: 0;
+}
+.podcasts .bg-podcasts .spotify-list .spotify iframe {
+  line-height: 0;
+  width: auto;
   z-index: 2;
-  width: 298px;
-  margin-bottom: 10px;
+  margin: 11px 11px 0px 11px;
 }
 @media screen and (min-width: 1024px) {
-  .podcasts .bg-podcasts .spotify-list iframe {
+  .podcasts .bg-podcasts .spotify-list .spotify iframe {
     width: 584px;
   }
 }
 
 .floating-phone {
-  position: absolute;
-  margin-top: -150px;
+  transform: translate(-5%, -10%);
   display: flex;
   flex-wrap: wrap;
 }
 @media screen and (min-width: 1024px) {
   .floating-phone {
-    left: 50%;
-    transform: translate(-50%, 0);
+    transform: translate(20%, -10);
     flex-wrap: nowrap;
     align-items: center;
   }
 }
 .floating-phone img {
   z-index: 2;
-  width: 288px;
-  left: 50%;
-  transform: translate(-5%, 0);
+  width: 360px;
+  overflow: hidden;
+  justify-content: center;
 }
 @media screen and (min-width: 1024px) {
   .floating-phone img {
-    transform: translate(-8%, 0);
     width: 480px;
   }
 }
-@media screen and (min-width: 1024px) {
-  .floating-phone .about-us {
-    transform: translate(-5%, 0);
-  }
+.floating-phone .about-us {
+  padding: 16px;
 }
-.floating-phone .about-us h2,
-.floating-phone .about-us p {
+.floating-phone .about-us h2, .floating-phone .about-us p {
   font-family: "IBM Plex Mono", sans-serif;
   color: #060A24;
   letter-spacing: 0;
   line-height: 22px;
   font-size: 14px;
-  width: 298px;
-  padding: 16px;
 }
 @media screen and (min-width: 1024px) {
-  .floating-phone .about-us h2,
-.floating-phone .about-us p {
+  .floating-phone .about-us h2, .floating-phone .about-us p {
     width: 464px;
   }
 }
@@ -349,12 +372,9 @@ header h2 {
   line-height: 42px;
 }
 
-.invited {
-  margin-top: 950px;
-}
 @media screen and (min-width: 1024px) {
   .invited {
-    margin-top: 700px;
+    margin-top: 36px;
   }
 }
 .invited .inv {
@@ -395,7 +415,6 @@ header h2 {
   font-family: "IBM Plex Sans", sans-serif;
   color: black;
   letter-spacing: 0;
-  width: 288px;
   font-size: 36px;
   margin-top: 25px;
   margin: 16px;

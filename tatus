@@ -1,0 +1,23 @@
+[33mcommit c596f11d7317f3648b26166cd49d3485a976baff[m[33m ([m[1;36mHEAD -> [m[1;32mv6[m[33m, [m[1;31morigin/v5[m[33m, [m[1;32mv5[m[33m)[m
+Author: Gaston <medicigaston.la@gmail.com>
+Date:   Thu Dec 19 19:36:32 2019 -0300
+
+    latest modification
+
+[33mcommit 534e0b70a7b8075d7c7ab13f01881c9219265b46[m
+Author: Gaston <medicigaston.la@gmail.com>
+Date:   Wed Dec 18 19:28:45 2019 -0300
+
+    finding white space that breaks everything
+
+[33mcommit 64b84e632f361917272ab3e47c0b8023ee58a517[m[33m ([m[1;31morigin/v3[m[33m, [m[1;31morigin/master[m[33m, [m[1;31morigin/HEAD[m[33m, [m[1;32mmaster[m[33m)[m
+Author: Gaston Medici <you@example.com>
+Date:   Fri Dec 13 19:54:35 2019 -0300
+
+    modified
+
+[33mcommit 2f864de709f8a962999012cac8e6f93017340c75[m
+Author: gastonmedici <medicigaston.la@gmail.com>
+Date:   Fri Dec 13 15:48:05 2019 -0300
+
+    Initial commit

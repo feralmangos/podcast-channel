@@ -8,10 +8,9 @@
 
 $color-blue: #0000FF;
 nav {
-    
     height: 44px;
     position: relative;
-    padding:10px 16px 10px 16px;
+    padding: 10px 16px 10px 16px;
     .navbar {
         input[type=checkbox] {
             display: none;
@@ -22,8 +21,7 @@ nav {
             height: 224px;
             justify-content: space-evenly;
             @media screen and (min-width: 1024px) {
-                position:static;
-
+                position: static;
                 display: flex;
                 flex-direction: row;
                 background: none;
@@ -56,7 +54,6 @@ nav {
         label {
             .menu-icon {
                 display: flex;
-                
                 top: 10px;
                 right: 16px;
                 cursor: pointer;
@@ -87,12 +84,12 @@ nav {
         width: 100%;
         background: #0000EC;
         @media screen and (min-width: 1024px) {
-            position:static;
+            position: static;
             display: flex;
             background: none;
             color: black;
             border: none;
-                        background: none;
+            background: none;
             color: black;
             border: none;
             justify-content: flex-end;
@@ -123,41 +120,40 @@ nav {
 }
 
 header {
-    
     font-family: 'IBM Plex Mono', monospace;
-    margin:16px;
+    margin: 16px;
     @media screen and (min-width: 1024px) {
         margin-left: 184px;
         margin-top: 120px;
     }
-    h1 {
-        font-family: 'IBM Plex Sans', sans-serif;
-        font-size: 36px;
-        color: #060A24;
-        letter-spacing: 0;
-        line-height: 42px;
-        margin-right:16px;
-        
-   width:100%;     
-   
-        font-weight: normal;
-        span {
-            text-decoration: line-through;
-        }
-        @media screen and (min-width: 1024px) {
-            width: 100%;
-            font-size: 66px;
+    .main-title {
+        padding-right: 32px;
+        margin-bottom: 16px;
+        h1 {
+            font-family: 'IBM Plex Sans', sans-serif;
+            font-size: 36px;
             color: #060A24;
             letter-spacing: 0;
+            line-height: 42px;
+            width: 100%;
+            font-weight: normal;
+            span {
+                text-decoration: line-through;
+            }
+            @media screen and (min-width: 1024px) {
+                width: 100%;
+                font-size: 66px;
+                color: #060A24;
+                letter-spacing: 0;
+            }
         }
     }
     h2 {
-        font-family: 'IBM Plex Sans', sans-serif;
+        font-family: 'IBM Plex Mono', sans-serif;
         color: #060A24;
         letter-spacing: 0px;
         line-height: 24px;
-        font-size: 16px;
-        
+        font-size: 14px;
         height: 66px;
         @media screen and (min-width: 1024px) {
             width: 628px;
@@ -177,7 +173,8 @@ header {
         color: #060A24;
     }
     button {
-        margin: 36px 0px 36px 16px;
+        margin: 0 auto;
+        margin-top: 36px;
         font-family: 'IBM Plex Mono', monospace;
         font-size: 16px;
         color: #060A24;
@@ -215,6 +212,33 @@ header {
     width: 100%;
     height: auto;
     background-image: linear-gradient(225deg, #0000FF 0%, #0000A3 100%);
+    overflow: hidden;
+    &::before {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        content: '';
+        background: white;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        transform-origin: top left;
+        transform: skew(-85deg);
+        z-index: 1;
+    }
+    &::after {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        content: '';
+        background: white;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        transform-origin: bottom left;
+        transform: skew(-85deg);
+        z-index: 1;
+    }
     /* &::before {
         margin-top: -5px;
         margin-left: 20px;
@@ -248,7 +272,7 @@ header {
     }*/
     .bg-podcasts {
         .episodes {
-            margin: 0px 0 25px 16px;
+            margin: 0px 0 21px 16px;
             padding-top: 64px;
             @media screen and (min-width: 1024px) {
                 padding-top: 186px;
@@ -261,11 +285,6 @@ header {
                 line-height: 42px;
             }
         }
-        .spotify {
-            .phone {
-                margin-top: 45px;
-            }
-        }
         .spotify-list {
             display: flex;
             flex-wrap: wrap;
@@ -274,12 +293,16 @@ header {
             @media screen and (min-width: 1024px) {
                 padding: 0px 44px 232px 44px;
             }
-            iframe {
-                z-index: 2;
-                width: 298px;
-                margin-bottom: 10px;
-                @media screen and (min-width: 1024px) {
-                    width: 584px;
+            .spotify {
+                line-height: 0;
+                iframe {
+                    line-height: 0;
+                    width: auto;
+                    z-index: 2;
+                    margin: 11px 11px 0px 11px;
+                    @media screen and (min-width: 1024px) {
+                        width: 584px;
+                    }
                 }
             }
         }
@@ -287,39 +310,32 @@ header {
 }
 
 .floating-phone {
-    position: absolute;
-    margin-top: -150px;
+    transform: translate(-5%, -10%);
     display: flex;
     flex-wrap: wrap;
     @media screen and (min-width: 1024px) {
-        left: 50%;
-        transform: translate(-50%, 0);
+        transform: translate(20%, -10);
         flex-wrap: nowrap;
         align-items: center;
     }
     img {
         z-index: 2;
-        width: 288px;
-        left: 50%;
-        transform: translate(-5%, 0);
+        width: 360px;
+        overflow: hidden;
+        justify-content: center;
         @media screen and (min-width: 1024px) {
-            transform: translate(-8%, 0);
             width: 480px;
         }
     }
     .about-us {
-        @media screen and (min-width: 1024px) {
-            transform: translate(-5%, 0);
-        }
-        h2,
-        p {
+        padding: 16px;
+        @media screen and (min-width: 1024px) {}
+        h2, p {
             font-family: 'IBM Plex Mono', sans-serif;
             color: #060A24;
             letter-spacing: 0;
             line-height: 22px;
             font-size: 14px;
-            width: 298px;
-            padding: 16px;
             @media screen and (min-width: 1024px) {
                 width: 464px;
             }
@@ -333,9 +349,8 @@ header {
 }
 
 .invited {
-    margin-top: 950px;
     @media screen and (min-width: 1024px) {
-        margin-top: 700px;
+        margin-top: 36px;
     }
     .inv {
         letter-spacing: 0;
@@ -373,7 +388,6 @@ header {
         font-family: 'IBM Plex Sans', sans-serif;
         color: black;
         letter-spacing: 0;
-        width: 288px;
         font-size: 36px;
         margin-top: 25px;
         margin: 16px;
