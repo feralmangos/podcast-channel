@@ -8,9 +8,14 @@
 
 $color-blue: #0000FF;
 nav {
+    line-height: 0px;
     height: 44px;
     position: relative;
     padding: 10px 16px 10px 16px;
+    @media screen and (min-width: 1024px){
+        height:auto;
+        padding:22px 100px 22px 100px;
+    }
     .navbar {
         input[type=checkbox] {
             display: none;
@@ -43,11 +48,9 @@ nav {
         justify-content: space-between;
         .logo {
             img {
-                left: 16px;
-                top: 10px;
+                width:24px;
                 @media screen and (min-width: 1024px) {
-                    left: 90px;
-                    top: 20px
+                width:36px;
                 }
             }
         }
@@ -61,14 +64,14 @@ nav {
         }
         .burger-icon {
             display: block;
-            font-size: 24px;
+            font-size: 22px;
             @media screen and (min-width: 1024px) {
                 display: none
             }
         }
         .close-icon {
             display: none;
-            font-size: 24px;
+            font-size: 22px;
             @media screen and (min-width: 1024px) {
                 display: none
             }
@@ -105,6 +108,9 @@ nav {
                 color: white;
                 padding-right: 16px;
                 @media screen and (min-width: 1024px) {
+                    padding-top:4px;
+                    padding-right:0px;
+                    padding-left:48px;
                     color: black;
                 }
                 &:hover {
@@ -155,8 +161,14 @@ header {
         line-height: 24px;
         font-size: 14px;
         height: 66px;
+        .txt-desktop{
+            display:none;
+        }
         @media screen and (min-width: 1024px) {
             width: 628px;
+            .txt-desktop{
+                display: inline-block
+            }
         }
     }
 }
@@ -188,6 +200,8 @@ header {
         font-weight: bolder;
         @media screen and (min-width: 1024px) {
             width: 226px;
+            margin: 0;
+
         }
         &:hover {
             background: tomato;
@@ -310,17 +324,18 @@ header {
 }
 
 .floating-phone {
-    transform: translate(-5%, -10%);
+    transform: translateY(-15%);
     display: flex;
     flex-wrap: wrap;
     @media screen and (min-width: 1024px) {
-        transform: translate(20%, -10);
+        transform: translateY(-15%);
         flex-wrap: nowrap;
         align-items: center;
+        justify-content:center;
     }
     img {
         z-index: 2;
-        width: 360px;
+        width:100%;
         overflow: hidden;
         justify-content: center;
         @media screen and (min-width: 1024px) {
