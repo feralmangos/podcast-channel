@@ -379,10 +379,16 @@ header h2 .txt-desktop {
 @media screen and (min-width: 1024px) {
   .floating-phone img {
     width: 480px;
+    max-width: 480px;
   }
 }
 .floating-phone .about-us {
   padding: 16px;
+}
+@media screen and (min-width: 1024px) {
+  .floating-phone .about-us {
+    line-height: 24px;
+  }
 }
 .floating-phone .about-us h2, .floating-phone .about-us p {
   font-family: "IBM Plex Mono", sans-serif;
@@ -399,15 +405,60 @@ header h2 .txt-desktop {
 .floating-phone .about-us p {
   padding-bottom: 8px;
 }
+@media screen and (min-width: 1024px) {
+  .floating-phone .about-us p {
+    font-size: 16px;
+  }
+}
 .floating-phone .about-us h2 {
   font-family: "IBM Plex Sans", sans-serif;
   font-size: 36px;
   line-height: 42px;
-  padding-bottom: 8px;
+  padding-bottom: 20px;
+}
+@media screen and (min-width: 1024px) {
+  .floating-phone .about-us h2 {
+    font-size: 48px;
+  }
 }
 
 .invited {
   margin-top: -30%;
+  /*.fprogrammers {
+      @media screen and (min-width: 768px) {
+          display: flex;
+          flex-wrap:nowrap;
+
+      }
+
+      @media screen and (min-width: 1440px) {
+
+          flex-wrap: wrap;
+
+      }
+      .fpic {
+          flex-grow:1;
+          margin-top: -5px;
+          .row1{
+              display:flex;
+              flex-direction:row;
+          }
+          .row2{
+              display:flex;
+          }
+          img {
+              width: 100%;
+              @media screen and (min-width: 768px) {
+                  flex-grow:1;
+
+              }
+              @media screen and (min-width: 1440px) {
+                  width: 480px;
+
+              }
+          }
+      }
+  }*/
 }
 @media screen and (min-width: 460px) {
   .invited {
@@ -433,29 +484,26 @@ header h2 .txt-desktop {
 }
 @media screen and (min-width: 1024px) {
   .invited .inv {
-    width: 480px;
+    width: 600px;
     margin-left: 200px;
     margin-bottom: 36px;
+    font-size: 48px;
+    margin-top: -80px;
   }
 }
-.invited .fprogrammers {
-  display: flex;
-  flex-wrap: wrap;
-}
-.invited .fprogrammers .fpic {
+.invited .fprogrammers img {
+  width: 100%;
   margin-top: -5px;
 }
-.invited .fprogrammers .fpic img {
-  width: 100%;
-}
-@media screen and (min-width: 768px) {
-  .invited .fprogrammers .fpic img {
-    width: 50%;
+@media screen and (min-width: 1440px) {
+  .invited .fprogrammers {
+    display: flex;
+    flex-wrap: wrap;
   }
-}
-@media screen and (min-width: 1024px) {
-  .invited .fprogrammers .fpic img {
+  .invited .fprogrammers .fpic {
+    margin-top: -5px;
     width: 480px;
+    flex-grow: 1;
   }
 }
 
