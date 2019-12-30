@@ -275,6 +275,11 @@ header h2 .txt-desktop {
       z-index: 3;
   }*/
 }
+@media screen and (min-width: 1440px) {
+  .podcasts {
+    height: 1024px;
+  }
+}
 .podcasts::before {
   position: absolute;
   width: 100%;
@@ -302,13 +307,13 @@ header h2 .txt-desktop {
   z-index: 1;
 }
 .podcasts .bg-podcasts .episodes {
-  margin: 0px 0 21px 16px;
+  margin: 0px 0px 21px 16px;
   padding-top: 64px;
 }
 @media screen and (min-width: 1024px) {
   .podcasts .bg-podcasts .episodes {
     padding-top: 186px;
-    padding-left: 184px;
+    padding-left: 168px;
   }
 }
 .podcasts .bg-podcasts .episodes h2 {
@@ -316,6 +321,12 @@ header h2 .txt-desktop {
   color: white;
   font-size: 36px;
   line-height: 42px;
+}
+@media screen and (min-width: 1024px) {
+  .podcasts .bg-podcasts .episodes h2 {
+    font-size: 48px;
+    line-height: 62px;
+  }
 }
 .podcasts .bg-podcasts .spotify-list {
   display: flex;
@@ -339,6 +350,7 @@ header h2 .txt-desktop {
 }
 @media screen and (min-width: 1024px) {
   .podcasts .bg-podcasts .spotify-list .spotify iframe {
+    margin: 23px 11px 46px 11px;
     width: 584px;
   }
 }
@@ -346,12 +358,13 @@ header h2 .txt-desktop {
 .floating-phone {
   transform: translateY(-15%);
   display: flex;
-  flex-wrap: wrap;
+  flex-direction: column;
+  align-items: center;
 }
 @media screen and (min-width: 1024px) {
   .floating-phone {
     transform: translateY(-15%);
-    flex-wrap: nowrap;
+    flex-direction: row;
     align-items: center;
     justify-content: center;
   }
@@ -359,6 +372,7 @@ header h2 .txt-desktop {
 .floating-phone img {
   z-index: 2;
   width: 100%;
+  max-width: 360px;
   overflow: hidden;
   justify-content: center;
 }
@@ -382,18 +396,31 @@ header h2 .txt-desktop {
     width: 464px;
   }
 }
+.floating-phone .about-us p {
+  padding-bottom: 8px;
+}
 .floating-phone .about-us h2 {
   font-family: "IBM Plex Sans", sans-serif;
   font-size: 36px;
   line-height: 42px;
+  padding-bottom: 8px;
 }
 
+.invited {
+  margin-top: -30%;
+}
+@media screen and (min-width: 460px) {
+  .invited {
+    margin-top: -10%;
+  }
+}
 @media screen and (min-width: 1024px) {
   .invited {
     margin-top: 36px;
   }
 }
 .invited .inv {
+  padding-left: 16px;
   letter-spacing: 0;
   line-height: 22px;
   font-size: 14px;
@@ -420,6 +447,11 @@ header h2 .txt-desktop {
 }
 .invited .fprogrammers .fpic img {
   width: 100%;
+}
+@media screen and (min-width: 768px) {
+  .invited .fprogrammers .fpic img {
+    width: 50%;
+  }
 }
 @media screen and (min-width: 1024px) {
   .invited .fprogrammers .fpic img {
